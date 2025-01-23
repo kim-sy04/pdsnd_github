@@ -92,7 +92,7 @@ def time_stats(df):
 
 def station_stats(df):
     """가장 인기 있는 출발지와 도착지, 여행 경로를 출력합니다."""
-    print('\n가장 인기 있는 역 통계를 계산 중입니다...\n')
+    print('\n가장 인기 있는 역 통계를 계산 중입니다..\n')
 
     common_start_station = calculate_mode(df['Start Station'], "출발지")
     common_end_station = calculate_mode(df['End Station'], "도착지")
