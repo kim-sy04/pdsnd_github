@@ -2,7 +2,6 @@ import time
 import pandas as pd
 import numpy as np
 
-# 도시 이름과 데이터 파일 경로 매핑
 CITY_DATA = {
     'chicago': 'chicago.csv',
     'new york city': 'new_york_city.csv',
@@ -62,7 +61,6 @@ def load_data(city, month, day):
     """
     df = pd.read_csv(CITY_DATA[city])
 
-    # 'Start Time' 컬럼을 datetime 형식으로 변환
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['Month'] = df['Start Time'].dt.strftime('%B').str.lower()
     df['Day'] = df['Start Time'].dt.day_name().str.lower()
@@ -94,7 +92,7 @@ def time_stats(df):
 
 def station_stats(df):
     """가장 인기 있는 출발지와 도착지, 여행 경로를 출력합니다."""
-    print('\n가장 인기 있는 역 통계를 계산 중입니다...\n')
+    print('\n가장 인기 있는 역 통계를 계산 중입니다..\n')
 
     common_start_station = calculate_mode(df['Start Station'], "출발지")
     common_end_station = calculate_mode(df['End Station'], "도착지")
