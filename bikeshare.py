@@ -14,8 +14,8 @@ def get_filters():
 
     Returns:
         city (str): 분석할 도시 이름
-        month (str): 필터링할 월 이름 또는 "all" (모든 월)
-        day (str): 필터링할 요일 이름 또는 "all" (모든 요일)
+        month (str): 월 또는 "all" (모든 월)
+        day (str): 요일 또는 "all" (모든 요일)
     """
     print('안녕하세요! 미국 자전거 공유 데이터를 탐색해봅시다!')
 
